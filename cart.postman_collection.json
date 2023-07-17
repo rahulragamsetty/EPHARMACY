@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "4ae454c2-c87d-4614-b296-0a97634d342a",
+		"name": "cart",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Products in the cart",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/cart/getproducts/nobita@abc.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"cart",
+						"getproducts",
+						"nobita@abc.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete all products from the cart",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/cart/deleteall/nobita@abc.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"cart",
+						"deleteall",
+						"nobita@abc.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a single product from cart",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/cart/delete/nobita@abc.com/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"cart",
+						"delete",
+						"nobita@abc.com",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modify quantity in cart",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/cart/modify/nobita@abc.com/8/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"cart",
+						"modify",
+						"nobita@abc.com",
+						"8",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adding products to cart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerEmailId\": \"nobita@abc.com\",\r\n    \"products\": [\r\n        {\r\n            \"medicineDTO\": {\r\n                \"medicineId\": 1050\r\n            },\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"medicineDTO\": {\r\n                \"medicineId\": 1051\r\n            },\r\n            \"quantity\": 2\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/cart/addcart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"cart",
+						"addcart"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

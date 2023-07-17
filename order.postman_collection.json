@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "65067d2a-c19c-49e6-b9e6-dc951b3b2805",
+		"name": "order",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cancel order",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/order/updateorder/13/not needed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"order",
+						"updateorder",
+						"13",
+						"not needed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/order/allorders/nobita@abc.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"order",
+						"allorders",
+						"nobita@abc.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Place order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerEmailId\": \"nobita@abc.com\",\r\n    \"deliveryAddress\": {\r\n        \"addressId\": 3\r\n    },\r\n    \"card\": {\r\n        \"cardId\": \"1234567812345632\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/order/placeorder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"order",
+						"placeorder"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

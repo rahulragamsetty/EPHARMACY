@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "f65a3453-83fb-4a95-a716-158b66b446bf",
+		"name": "Medicine",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Medicines",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/medicine/getall",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"medicine",
+						"getall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get by category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/medicine/getbycategory/Fitness",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"medicine",
+						"getbycategory",
+						"Fitness"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/medicine/getbyid/1060",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"medicine",
+						"getbyid",
+						"1060"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Quantity",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/medicine/updatequantity/1080/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"medicine",
+						"updatequantity",
+						"1080",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
